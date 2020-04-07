@@ -1,5 +1,6 @@
 package com.weborder.pages;
 
+import com.weborder.utilities.BrowserUtilities;
 import com.weborder.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,15 @@ public abstract class AbstractBasePage {
 
     @FindBy(tagName = "h1")
     protected WebElement pageLogo;
+
+
+    @FindBy(tagName = "h2")
+    protected WebElement pageSubtitle;
+
+    public String getPageSubtitleText() {
+        BrowserUtilities.waitForPageToLoad(5);
+        return pageSubtitle.getText().trim();
+    }
 
     public String getPageLogoText() {
         return pageLogo.getText();
