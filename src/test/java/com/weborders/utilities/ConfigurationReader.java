@@ -1,4 +1,4 @@
-package com.weborder.utilities;
+package com.weborders.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

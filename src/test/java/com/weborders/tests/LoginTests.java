@@ -1,6 +1,6 @@
-package com.weborder.tests;
+package com.weborders.tests;
 
-import com.weborder.pages.LoginPage;
+import com.weborders.pages.LoginPage;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 

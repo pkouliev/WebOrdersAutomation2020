@@ -1,7 +1,7 @@
-package com.weborder.pages;
+package com.weborders.pages;
 
-import com.weborder.utilities.BrowserUtilities;
-import com.weborder.utilities.Driver;
+import com.weborders.utilities.BrowserUtilities;
+import com.weborders.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,12 +23,12 @@ public abstract class AbstractBasePage {
     protected WebElement pageSubtitle;
 
     public String getPageSubtitleText() {
-        BrowserUtilities.waitForPageToLoad(5);
+        BrowserUtilities.waitForPageToLoad(10);
         return pageSubtitle.getText().trim();
     }
 
     public String getPageLogoText() {
-        return pageLogo.getText();
+        return pageLogo.getText().trim();
     }
 
     public AbstractBasePage() {
@@ -40,7 +40,7 @@ public abstract class AbstractBasePage {
      * @param component
      */
     public void navigateTo(String component) {
-        String locator = "//a[text()=' "+component+" ']";
+        String locator = "//a[text()='" +component + "']";
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator))).click();
     }
 

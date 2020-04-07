@@ -1,4 +1,4 @@
-package com.weborder.utilities;
+package com.weborders.utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
