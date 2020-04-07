@@ -13,6 +13,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import static org.testng.Assert.*;
+
+
+
+
 public class AbstractBaseTest {
 
     protected WebDriver driver = Driver.getDriver();
